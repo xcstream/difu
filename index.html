@@ -1,0 +1,132 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>地府管理系统</title>
+    <script src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/element-ui/2.12.0/index.js"></script>
+    <link href="https://cdn.bootcss.com/element-ui/2.12.0/theme-chalk/index.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+        }
+        .el-menu-item{
+        }
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <el-row class="tac">
+            <el-col style="width:205px">
+                <el-menu
+                        :collapse="false"
+                        :default-openeds="['生死簿','十八层地狱','系统管理']"
+                        style="height: 100%"
+                        default-active="2"
+                        class="el-menu-vertical-demo"
+                        @open="handleOpen"
+                        @close="handleClose"
+                        background-color="#001529"
+                        text-color="#fff"
+                        active-text-color="#ffd04b"
+                >
+                    <el-menu-item index="地府管理系统">
+                        <template slot="title">
+                            <span style="font-size: 16px">地府管理系统</span>
+                        </template>
+                    </el-menu-item>
+
+                    <el-menu-item index="首页">
+                        <template slot="title">
+                            <i class="el-icon-s-home"></i>
+                            <span>首页</span>
+                        </template>
+                    </el-menu-item>
+
+                    <el-submenu index="生死簿">
+                        <template slot="title">
+                            <i class="el-icon-menu"></i>
+                            <span>生死簿</span>
+                        </template>
+                        <el-menu-item index="用户管理" background-color="#000C17">
+                             <span style="font-size: 12px">用户管理</span>
+                        </el-menu-item>
+                        <el-menu-item index="数据同步" class="subm">
+                            <span slot="title" style="font-size: 12px">数据同步</span>
+                        </el-menu-item>
+                    </el-submenu>
+
+                    <el-menu-item index="勾魂管理">
+                        <i class="el-icon-check"></i>
+                        <span slot="title">勾魂管理</span>
+                    </el-menu-item>
+                    <el-menu-item index="阎王殿审判记录">
+                        <i class="el-icon-chicken"></i>
+                        <span slot="title">阎王殿审判记录</span>
+                    </el-menu-item>
+
+                    <el-submenu index="十八层地狱">
+                        <template slot="title">
+                            <i class="el-icon-knife-fork"></i>
+                            <span>十八层地狱</span>
+                        </template>
+                        <el-menu-item index="设备管理" class="subm">
+                            <span slot="title" style="font-size: 12px">设备管理</span>
+                        </el-menu-item>
+                        <el-menu-item index="作业流程" class="subm">
+                            <span slot="title" style="font-size: 12px">作业流程</span>
+                        </el-menu-item>
+                        <el-menu-item index="用户管理" class="subm">
+                            <span slot="title" style="font-size: 12px">用户管理</span>
+                        </el-menu-item>
+                    </el-submenu>
+
+                    <el-menu-item index="六道轮回">
+                        <i class="el-icon-refresh"></i>
+                        <span slot="title">六道轮回</span>
+                    </el-menu-item>
+
+                    <el-menu-item index="冥币管理">
+                        <i class="el-icon-help"></i>
+                        <span slot="title">冥币管理</span>
+                    </el-menu-item>
+
+                    <el-menu-item index="日志管理">
+                        <i class="el-icon-tickets"></i>
+                        <span slot="title">日志管理</span>
+                    </el-menu-item>
+
+                    <el-submenu index="系统管理">
+                        <template slot="title">
+                            <i class="el-icon-setting"></i>
+                            <span>系统管理</span>
+                        </template>
+                        <el-menu-item index="管理员" class="subm">
+                            <span slot="title" style="font-size: 12px">管理员</span>
+                        </el-menu-item>
+                        <el-menu-item index="角色权限" class="subm">
+                            <span slot="title" style="font-size: 12px">角色权限</span>
+                        </el-menu-item>
+                    </el-submenu>
+                </el-menu>
+            </el-col>
+            <el-col style="width: calc(100% - 206px)">
+                <div style="background-color: #F0F2F5;height:100%">
+                </div>
+            </el-col>
+        </el-row>
+    </div>
+
+    <script>
+        app = new Vue({
+            el:'#app',
+            methods:{
+
+                handleOpen:()=>{},
+                handleClose:()=>{},
+
+            }
+        })
+    </script>
+</body>
+</html>
